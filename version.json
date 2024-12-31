@@ -1,4 +1,19 @@
+import json
+
+# JSON object as a string
+json_data = '''
 {
-   'version': "1.0.1429.0",
-   'url': "https://pixeldrain.com/u/r497h8Ke/Train Sim World 5_1.0.1429.0.rar"
+   "version": "1.0.1429.0",
+   "url": "https://pixeldrain.com/u/r497h8Ke/Train Sim World 5_1.0.1429.0.rar"
 }
+'''
+
+# Parse JSON data
+data = json.loads(json_data)
+
+# Accessing the data
+version = data['version']
+url = data['url']
+
+print(f"Version: {version}")
+print(f"Download URL: {url}")
